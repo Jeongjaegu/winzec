@@ -57,7 +57,7 @@ import com.vaklinov.zcashui.ZCashClientCaller.WalletCallException;
 
 
 /**
- * Addresses panel - shows T/Z addresses and their balnces.
+ * Addresses panel - shows T/Z addresses and their balances.
  *
  * @author Ivan Vaklinov <ivan@vaklinov.com>
  */
@@ -258,7 +258,7 @@ public class AddressesPanel
 			JOptionPane.showMessageDialog(
 				this.getRootPane().getParent(), 
 				"A new " + (isZAddress ? "Z (Private)" : "T (Transparent)") 
-				+ " address has been created cuccessfully:\n" + address, 
+				+ " address has been created successfully:\n" + address, 
 				"Address created", JOptionPane.INFORMATION_MESSAGE);
 			
 			this.updateWalletAddressBalanceTableInteractive();
@@ -339,7 +339,7 @@ public class AddressesPanel
 		// Z Addresses - they are OK
 		String[] zAddresses = clientCaller.getWalletZAddresses();
 		
-		// T Addresses listed with the list received by addr comamnd
+		// T Addresses listed with the list received by addr command
 		String[] tAddresses = this.clientCaller.getWalletAllPublicAddresses();
 		Set<String> tStoredAddressSet = new HashSet<>();
 		for (String address : tAddresses)
