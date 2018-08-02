@@ -7,7 +7,7 @@
       <CreateFolder/>
       <RemoveFolder Id="RemoveDir0" On="uninstall" />
         <RegistryKey Root="HKCU"  Key="Software\Unknown\winzec" Action="createAndRemoveOnUninstall">
-         <RegistryValue Name="Version" Value="1.1.0" Type="string" KeyPath="yes"/>
+         <RegistryValue Name="Version" Value="1.1.2" Type="string" KeyPath="yes"/>
        </RegistryKey>
        <File Id="FileId1" Name="license.txt"  Source="license.txt" ProcessorArchitecture="x64">
        </File>
@@ -26,7 +26,7 @@
        </File>
      </Component>
      <Directory Id="dirid7" Name="app">
-      <Component Id="comp1" DiskId="1" Guid="d5b341b1-0183-424b-8819-985bcee62906" Win64="yes">
+      <Component Id="comp1" DiskId="1" Guid="d5b341.1.2183-424b-8819-985bcee62906" Win64="yes">
        <CreateFolder/>
        <RemoveFolder Id="RemoveDir8" On="uninstall" />
         <File Id="FileId9" Name="commons-codec-1.9.jar"  Source="app\commons-codec-1.9.jar" ProcessorArchitecture="x64">

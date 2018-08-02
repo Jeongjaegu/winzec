@@ -3,7 +3,7 @@ default: winapp ;
 
 APPNAME=winzec
 BUILD ?= $(shell git rev-list HEAD | wc -l|tr -d [:space:])
-SHORTVERSION = 1.1.0
+SHORTVERSION = 1.1.2
 VERSION ?= $(SHORTVERSION)-$(BUILD)
 winapp:
 	cp src/build/build.xml src/build/build.xml.bak

@@ -147,7 +147,7 @@
 		<fx:application id="wallet"
 			name="winzec" 
 			mainClass="${main-class}"
-			version="1.1.0"/>
+			version="1.1.2"/>
 			
 		
 		<fx:resources id="appRes">
@@ -186,7 +186,7 @@
 				<fx:jvmarg value="-Dzcash.location.dir=$APPDIR/Java" />
 				<fx:jvmarg value="-Dlaunching.from.appbundle=true" />
 				<fx:jvmarg value="-Dwallet.name=winzec" />
-				<fx:jvmarg value="-Dwallet.version=1.1.0"/>
+				<fx:jvmarg value="-Dwallet.version=1.1.2"/>
 			</fx:platform>
 			
 		</fx:deploy>
