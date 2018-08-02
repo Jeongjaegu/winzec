@@ -142,9 +142,9 @@ public class WalletOperations
 			
 			JOptionPane.showMessageDialog(
 				this.parent, 
-				"The wallet has been encrypted sucessfully and zcashd has stopped.\n" +
+				"The wallet has been encrypted successfully and zcashd has stopped.\n" +
 				"The GUI wallet will be stopped as well. Please restart both. In\n" +
-				"addtion the internal wallet keypool has been flushed. You need\n" +
+				"addition the internal wallet keypool has been flushed. You need\n" +
 				"to make a new backup..." +
 				"\n",
 				"Wallet is now encrypted...", JOptionPane.INFORMATION_MESSAGE);
@@ -261,7 +261,7 @@ public class WalletOperations
 				f.getName() + "\n" +
 				"in the backup directory provided to zcashd (-exportdir=<dir>).\n" +
 				"You need to protect this file from unauthorized access. Anyone who\n" +
-				"has access to the private keys can spend the ZCash balance!",
+				"has access to the private keys can spend the Zcash balance!",
 				"Wallet private key export...", JOptionPane.INFORMATION_MESSAGE);
 			
 		} catch (Exception e)
@@ -380,7 +380,7 @@ public class WalletOperations
 				this.clientCaller.unlockWallet(pd.getPassword());
 			}
 			
-			// TODO: We need a much more precise criterion to distinguish T/Z adresses;
+			// TODO: We need a much more precise criterion to distinguish T/Z addresses;
 			boolean isZAddress = address.startsWith("z") && address.length() > 40;
 			
 			String privateKey = isZAddress ?

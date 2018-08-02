@@ -171,7 +171,7 @@ public class TransactionTable
 					        JOptionPane.showMessageDialog(
 						            parent,
 						            "The selected transaction does not have as destination a Z (private) \n" +
-						            "address or it is unkonwn (not listed) and thus no memo information \n" +
+						            "address or it is unknown (not listed) and thus no memo information \n" +
 						            "about this transaction is available.",
 						            "Memo information is unavailable",
 						            JOptionPane.ERROR_MESSAGE);
@@ -182,7 +182,7 @@ public class TransactionTable
 						System.out.println("Transaction ID for Memo field is: " + txID);
 						System.out.println("Account for Memo field is: " + acc);
 						parent.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-						// TODO: some day support outgoing Z transactions
+						// TODO: someday support outgoing Z transactions
  						String MemoField = caller.getMemoField(acc, txID);
  						parent.setCursor(oldCursor);
  						System.out.println("Memo field is: " + MemoField);
@@ -239,7 +239,7 @@ public class TransactionTable
 			JLabel infoLabel = new JLabel(
 					"<html><span style=\"font-size:9px;\">" +
 					"The table shows the information about the transaction with technical details as " +
-					"they appear at ZCash network level." +
+					"they appear at Zcash network level." +
 				    "</span>");
 			infoLabel.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED));
 			tempPanel.add(infoLabel, BorderLayout.CENTER);

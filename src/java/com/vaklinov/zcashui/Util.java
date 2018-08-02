@@ -95,14 +95,14 @@ public class Util
 	}
 	
 	
-	// Turns a 1.0.7+ error message to a an old JSOn style message
+	// Turns a 1.0.7+ error message to an old JSON style message
 	// info - new style error message
 	public static JsonObject getJsonErrorMessage(String info)
 	    throws IOException
 	{
     	JsonObject jInfo = new JsonObject();
     	
-    	// Error message here comes from ZCash 1.0.7+ and is like:
+    	// Error message here comes from Zcash 1.0.7+ and is like:
     	//zcash-cli getinfo
     	//error code: -28
     	//error message:

@@ -66,7 +66,7 @@ import com.vaklinov.zcashui.ZCashInstallationObserver.InstallationDetectionExcep
 
 
 /**
- * Main ZCash Window.
+ * Main Zcash Window.
  *
  * @author David Mercer <david@mercerweiss.com>
  */
@@ -167,7 +167,7 @@ public class ZCashUI
         menuItemImportOnePrivateKey.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, accelaratorKeyMask));        
         mb.add(wallet);
 
-        // Some day the extras menu will be populated with less essential funcitons
+        // Someday the extras menu will be populated with less essential funcitons
         //JMenu extras = new JMenu("Extras");
         //extras.setMnemonic(KeyEvent.VK_ NOT R);
         //extras.add(menuItemAddressBook = new JMenuItem("Address book...", KeyEvent.VK_D));
@@ -312,11 +312,11 @@ public class ZCashUI
 
                 JOptionPane.showMessageDialog(
                     ZCashUI.this.getRootPane().getParent(),
-                    "The ZCash GUI Wallet is currently considered experimental. Use of this software\n" +
+                    "The Zcash GUI Wallet is currently considered experimental. Use of this software\n" +
                     "comes at your own risk! Be sure to read the list of known issues and limitations\n" +
                     "at this page: https://github.com/vaklinov/zcash-swing-wallet-ui\n\n" +
-                    "This program is not officially endorsed by or associated with the ZCash project\n" +
-                    "and the ZCash company. ZCash and the ZCash logo are trademarks of the\n" +
+                    "This program is not officially endorsed by or associated with the Zcash project\n" +
+                    "and the Zcash company. Zcash and the Zcash logo are trademarks of the\n" +
                     "Zerocoin Electric Coin Company.\n\n"+ 
                     "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n" +
                     "IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n" +
@@ -369,14 +369,14 @@ public class ZCashUI
         {
         	OS_TYPE os = OSUtil.getOSType();
         	
-            System.out.println("Starting ZCash Swing Wallet ...");
+            System.out.println("Starting Zcash Swing Wallet ...");
             System.out.println("OS: " + System.getProperty("os.name") + " = " + os);
             System.out.println("Current directory: " + new File(".").getCanonicalPath());
             System.out.println("Class path: " + System.getProperty("java.class.path"));
             System.out.println("Environment PATH: " + System.getenv("PATH"));
 
             // Look and feel settings - for now a custom OS-look and feel is set for Windows,
-            // Mac OS will follow later.
+            // macOS will follow later.
             if (os == OS_TYPE.WINDOWS)
             {
             	// Custom Windows L&F and font settings
@@ -434,7 +434,7 @@ public class ZCashUI
             if ((zcashdInfo.status != DAEMON_STATUS.RUNNING) || (daemonStartInProgress))
             {
             	System.out.println(
-            		"zcashd is not runing at the moment or has not started/synchronized 100% - showing splash...");
+            		"zcashd is not running at the moment or has not started/synchronized 100% - showing splash...");
 	            startupBar = new StartupProgressDialog(initialClientCaller);
 	            startupBar.setVisible(true);
 	            startupBar.waitForStartup();
@@ -474,8 +474,8 @@ public class ZCashUI
             {
                 JOptionPane.showMessageDialog(
                     null,
-                    "There was a problem communicating with the ZCash daemon/wallet. \n" +
-                    "Please ensure that the ZCash server zcashd is started (e.g. via \n" + 
+                    "There was a problem communicating with the Zcash daemon/wallet. \n" +
+                    "Please ensure that the Zcash server zcashd is started (e.g. via \n" + 
                     "command  \"zcashd --daemon\"). Error message is: \n" +
                      wce.getMessage() +
                     "See the console output for more detailed error information!",
