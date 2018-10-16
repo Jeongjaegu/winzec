@@ -7,7 +7,7 @@
  *                                                 |___/
  *
  * Copyright (c) 2016-2017 Ivan Vaklinov <ivan@vaklinov.com>
- * Copyright (c) 2016-2017 David Mercer <radix42@gmail.com>
+ * Copyright (c) 2016-2017 Jane Mercer <radix42@gmail.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -190,7 +190,7 @@ public class SendCashPanel
 		tempPanel.add(new JLabel(" ZEC"));
 		feePanel.add(tempPanel, BorderLayout.SOUTH);
 
-		// Donations make the world go round!!!!! And they keep David fed and happy, which makes the world go round
+		// Donations make the world go round!!!!! And they keep Jane fed and happy, which makes the world go round
 		JPanel donationPanel       = new JPanel(new BorderLayout());
 		donationPanel.add(new JLabel("Wallet Dev Fee:"), BorderLayout.NORTH);
 		tempPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 0, 0));

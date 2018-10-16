@@ -3,8 +3,8 @@
 [Setup]
 AppId={{wallet}}
 AppName=winzec
-AppVersion=1.1.2
-AppVerName=winzec 1.1.2
+AppVersion=2.0.1
+AppVerName=winzec 2.0.1
 AppPublisher=The MercerWeiss Collective
 AppComments=winzec
 AppCopyright=Copyright (C) 2018 The MercerWeiss Collective
@@ -23,7 +23,7 @@ DefaultGroupName=Unknown
 LicenseFile=license.txt
 ;Win7 or above
 MinVersion=0,6.1 
-OutputBaseFilename=winzec-1.1.2
+OutputBaseFilename=winzec-2.0.1
 Compression=lzma
 SolidCompression=yes
 PrivilegesRequired=lowest
