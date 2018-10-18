@@ -30,9 +30,9 @@ import org.apache.http.impl.client.HttpClients;
  */
 public class ProvingKeyFetcher {
     
-    private static final int PROVING_KEY_SIZE = 910173851;
-    private static final String SHA256 = "8bc20a7f013b2b58970cddd2e7ea028975c88ae7ceb9259a5344a16bc2c0eef7";
-    private static final String URL = "https://z.cash/downloads/sprout-proving.key";
+    private static final int PROVING_KEY_SIZE = 725523612;
+    private static final String SHA256 = "b685d700c60328498fbde589c8c7c484c722b788b265b72af448a5bf0ee55b50";
+    private static final String URL = "https://z.cash/downloads/sprout-groth16.params";
     // TODO: add backups
     
     public void fetchIfMissing(StartupProgressDialog parent) throws IOException {
@@ -54,15 +54,30 @@ public class ProvingKeyFetcher {
             needsFetch = true;
             zCashParams.mkdirs();
         }
-        
-        // verifying key is small, always copy it
+
+	 // verifying key is small, always copy it
         File verifyingKeyFile = new File(zCashParams,"sprout-verifying.key");
-        FileOutputStream fos = new FileOutputStream(verifyingKeyFile);
-        InputStream is = ProvingKeyFetcher.class.getClassLoader().getResourceAsStream("sprout-verifying.key");
-        copy(is,fos);
-        fos.close();
-        
-        File provingKeyFile = new File(zCashParams,"sprout-proving.key");
+        FileOutputStream vfos = new FileOutputStream(verifyingKeyFile);
+        InputStream vis = ProvingKeyFetcher.class.getClassLoader().getResourceAsStream("sprout-verifying.key");
+        copy(vis,vfos);
+        vfos.close();
+	
+        // output key is small, always copy it
+        File outputKeyFile = new File(zCashParams,"sapling-output.params");
+        FileOutputStream ofos = new FileOutputStream(outputKeyFile);
+        InputStream ois = ProvingKeyFetcher.class.getClassLoader().getResourceAsStream("sapling-output.params");
+        copy(ois,ofos);
+        ofos.close();
+
+        // spending key is also small, always copy it, too
+	File spendingKeyFile = new File(zCashParams,"sapling-spend.params");
+	FileOutputStream sfos = new FileOutputStream(spendingKeyFile);
+	InputStream sis = ProvingKeyFetcher.class.getClassLoader().getResourceAsStream("sapling-spend.params");
+	copy(sis,sfos);
+	sfos.close();
+
+	
+        File provingKeyFile = new File(zCashParams,"sprout-groth16.params");
         provingKeyFile = provingKeyFile.getCanonicalFile();
         if (!provingKeyFile.exists()) {
             needsFetch = true;
@@ -88,7 +103,7 @@ public class ProvingKeyFetcher {
         CloseableHttpResponse response = null;
         try {
             response = httpClient.execute(get);
-            is = response.getEntity().getContent();
+            InputStream is = response.getEntity().getContent();
             ProgressMonitorInputStream pmis = new ProgressMonitorInputStream(parent, "Downloading proving key", is);
             pmis.getProgressMonitor().setMaximum(PROVING_KEY_SIZE);
             pmis.getProgressMonitor().setMillisToPopup(10);
