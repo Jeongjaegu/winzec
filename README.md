@@ -2,6 +2,8 @@
 
 ## A Zcash full node and GUI wallet for 64-bit Windows
 
+Latest version binaries are always at https://WinZEC.com
+
 This software package incorporates the port of Zcash to Windows by @radix42 and the
 ZCashSwingWallet by @vaklinov with enhancements by @zab
 
